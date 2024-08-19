@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello_world;
+
+option go_package = "hello/";
+
+service HelloWord {
+    rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+    string name = 1;
+}
+
+message GreetResponse {
+    string message = 1;
+}
